@@ -30,7 +30,7 @@ app.use(cookieParser(process.env.COOKIE_SECRET));
 //app.use(express.static(path.join(__dirname, "..", "..", "front", "dist")));
 app.use(
   "/",
-  expressStaticGzip(path.join(__dirname, "..", "..", "expfront", "dist"), {
+  expressStaticGzip(path.join(__dirname, "..", "..", "front", "dist"), {
     // serveStatic: { maxAge: 24 * 3600 * 1000 },
   })
 );

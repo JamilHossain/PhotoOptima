@@ -6,6 +6,7 @@ import CustomPointsAdd from "./CustomPointsAdd";
 function FileName() {
   return (
     <div>
+      <p>sumon</p>
       <CustomPointsAdd title="Product Title" />
       <CustomPointDnd title="Product Title" />
     </div>
