@@ -1,0 +1,28 @@
+0 , 1 , 2 , 3, 4, 5
+0 , 2, 4, 6, 8, 10
+  1   3  5  7  9  
+
+///////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////
+
+const [filteredData, setFilteredData] = useState([]);
+
+useEffect(() => {
+    if (deferredSearchV.trim() === "") {
+      setFilteredData(data ? data : []);
+      return;
+    }
+    const new_arr = data
+      ? data.filter((item: any) =>
+          item.file_name
+            .toLowerCase()
+            .includes(deferredSearchV.trim().toLowerCase())
+        )
+      : [];
+    setFilteredData(new_arr);
+  }, [data, deferredSearchV]);
+
+
+///////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////
+   

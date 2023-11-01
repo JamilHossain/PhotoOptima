@@ -1,0 +1,54 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+  output   = "../src/generated/client"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model CrushedTable {
+  id         String   @id @default(uuid())
+  shop_id    String
+  img_id     String
+  product_id String
+  created_at DateTime
+  anchor_url String
+  size       String
+  size_saved String
+  crushed_at DateTime @default(now())
+}
+
+model ShopTable {
+  id               String   @id @default(uuid())
+  shop_id          String
+  token            String
+  installed_at     DateTime @default(now())
+  app_plan         String
+  receipt_anchor   String
+  total_compressed String
+  total_saved      String
+  total_stored     String
+}
+
+//install date
+//last active
+//status
+
+model BillTable {
+  id               String   @id @default(uuid())
+  shop_id          String
+  billing_on       DateTime
+  total_compressed String
+  charge_id        String
+}
+
+model FreeTable {
+  id               String @id @default(uuid())
+  shop_id          String
+  total_compressed String
+}

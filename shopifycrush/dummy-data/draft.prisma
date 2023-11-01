@@ -1,0 +1,36 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+    provider = "prisma-client-js"
+    output   = "../src/generated/client"
+}
+
+datasource db {
+    provider = "postgresql"
+    url      = env("DATABASE_URL")
+}
+
+model CrushedTable {
+    id         String   @id @default(uuid())
+    shop_id    String
+    img_id     String
+    product_id String
+    anchor_url String
+    size       Int
+    size_saved Int
+    created_at DateTime
+    crushed_at DateTime
+    alt_tags   String[]
+}
+
+model shopTable {
+    id               String   @id @default(uuid())
+    shop_id          String
+    installed_at     DateTime
+    app_plan         String
+    receipt_anchor   String // given by shopify
+    total_compressed Int
+    total_saved      Int
+    total_stored     Int
+}

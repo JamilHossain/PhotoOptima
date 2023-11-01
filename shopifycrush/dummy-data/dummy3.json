@@ -1,0 +1,15 @@
+{
+  "image": {
+    "position": 1,
+    "width": 225,
+    "height": 225,
+    "alt": null,
+    "id": 42452612022563,
+    "product_id": 8606524145955,
+    "created_at": "2023-09-14T02:11:20-04:00",
+    "updated_at": "2023-09-14T02:11:20-04:00",
+    "src": "https://cdn.shopify.com/s/files/1/0822/1065/2451/files/created_by_sumon.jpg?v=1694671880",
+    "variant_ids": [],
+    "admin_graphql_api_id": "gid://shopify/ProductImage/42452612022563"
+  }
+}

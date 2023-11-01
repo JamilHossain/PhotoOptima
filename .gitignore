@@ -1,0 +1,10 @@
+
+/front/dist
+/front/node_modules
+
+/shopifycrush/node_modules
+/shopifycrush/.env
+/shopifycrush/build
+/shopifycrush/src/generated
+
+
